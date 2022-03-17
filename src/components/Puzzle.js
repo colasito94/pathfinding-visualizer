@@ -1,23 +1,62 @@
-import React, {useEffect, useState} from 'react';
-import PuzzleCell from "./PuzzleCell";
 import PuzzleRow from "./PuzzleRow";
+import breadthFirstSearch from "../breadthFirstSearch.mjs";
+import getNeighborSquares from "../getNeighborSquares.mjs";
+import dijkstra from "../dijkstra.mjs";
+
 
 function Puzzle() {
-    const [puzzle, setPuzzle] = useState([]);
-
-    const loadPuzzle = () => {
-        const myPuzzle = [{rows: [0, 1, 2, 3, 4], columns: [0, 1, 2, 3, 4]}]
-        setPuzzle(myPuzzle);
+    const drawPath = () => {
+        const minPath = dijkstra()
+        for (let i = 0; i < minPath.length; i++) {
+            setTimeout(() => {
+                const [row, col] = minPath[i]
+                const squareID = `r${row}c${col}`
+                document.getElementById(squareID).style.background = "rgb(75,0,130)"
+            }, 25 * i);
+        }
     }
 
-    useEffect(() => {
-        loadPuzzle();  // Will only be called once in the lifecycle
-    }, []);
+    const visualizeDijkstra = (x, y) => {
+        const minPath = getNeighborSquares(x, y)
+        for (let i = 0; i < minPath.length; i++) {
+          setTimeout(() => {
+            const [row, col] = minPath[i]
+              if (row !== 9 || col !== 16 && (row !== 9 || col !== 41)) {
+            const squareID = `r${row}c${col}`
+            document.getElementById(squareID).style.background = "rgb(252,255,164)"
+                  }
+          }, 10 * i);
+        }
+      }
+
+    const rows = Array.from(Array(19).keys())
     return (
         <div>
-            <PuzzleRow> </PuzzleRow>
+            {rows.map((row, index) => <PuzzleRow row={row} index={index}/>)}
+
+            <button
+                onClick={ () => {
+                    let visualize = () => {
+                        const neighbors = breadthFirstSearch(9, 16)
+                        for (let i = 0; i < neighbors.length; i++) {
+                            setTimeout(() => {
+                                const [row, col] = neighbors[i]
+                                visualizeDijkstra(row, col)
+                            }, 5 * i)
+                        }
+                        return "Success"
+                    }
+
+                    const myPromise = new Promise(function(resolve, reject) {
+                        resolve(visualize())
+                    });
+
+                    myPromise.then(setTimeout((drawPath), 3500))
+                }}>
+                Change Color
+            </button>
         </div>
-    );
+    ); 
 }
 
 export default Puzzle;

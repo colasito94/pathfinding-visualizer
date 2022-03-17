@@ -1,11 +1,6 @@
-import React from 'react';
-
 function PuzzleCell( { row, col }) {
     return (
-            <div
-                id={`${row}${col}` }
-                className="square"
-            >
+            <div id={`r${row}c${col}`} className="cell">
             </div>
     );
 }

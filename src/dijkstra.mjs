@@ -1,5 +1,4 @@
-function dijkstra(board, source, destination) {
-    // Priority queue implementation from https://stackoverflow.com/a/42919752
+function dijkstra() {
     const top = 0;
     const parent = i => ((i + 1) >>> 1) - 1;
     const left = i => (i << 1) + 1;
@@ -13,7 +12,7 @@ function dijkstra(board, source, destination) {
             return this._heap.length;
         }
         isEmpty() {
-            return this.size() == 0;
+            return this.size() === 0;
         }
         peek() {
             return this._heap[top];
@@ -67,6 +66,11 @@ function dijkstra(board, source, destination) {
         }
     }
 
+    // Initialize board
+    const board = Array.from(new Array(20),_=> new Array(58).fill("-"))
+    let source = [9, 16]
+    let destination = [9, 41]
+
     // Setup auxiliary matrices
     const m = board.length
     const n = board[0].length
@@ -79,12 +83,15 @@ function dijkstra(board, source, destination) {
     const pq = new PriorityQueue();
     pq.push([0, source_x, source_y])
 
+
+    const allNeighbors = []
     while (pq.size() > 0) {
         const [current_distance, x, y] = pq.pop()
         if (current_distance > distances[x][y]) {
             continue;
         }
         const neighbors = [[x, y + 1], [x, y - 1], [x + 1, y], [x - 1, y]]
+        allNeighbors.push.apply(allNeighbors, neighbors)
         for (const arr of neighbors) {
             const [row, column] = arr
             if (0 <= row && row < m && 0 <= column && column < n && board[row][column] === '-') {
@@ -115,22 +122,11 @@ function dijkstra(board, source, destination) {
     }
     const minPath = []
     calculatePath(parents, destination)
-    return minPath
+    const new_path = minPath.filter(([row, col]) =>
+        row !== 9 || col !== 16
+    ).filter(([row, col]) =>
+        row !== 9 || col !== 41 )
+    return new_path
 }
 
-
-let my_board = [["-", "-", "-", "-", "-"],
-    ["-", "-", "#", "-", "-"],
-    ["-", "-", "-", "-", "-"],
-    ["#", "-", "#", "#", "-"],
-    ["-", "#", "-", "-", "-"]]
-
-
-let my_source = [0, 2]
-let my_destination = [2, 2]
-// my_source = [0, 0]
-// my_destination = [4, 0]
-// my_source = [0, 0]
-// my_destination = [4, 4]
-
-console.log(dijkstra(my_board, my_source, my_destination))
+export default dijkstra;
