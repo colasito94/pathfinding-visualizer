@@ -28,8 +28,14 @@
   float:left;
 }
 
+/*#r9c16 {*/
+/*  background: darkslategray;*/
+/*}*/
+
 #r9c16 {
-  background: darkslategray;
+  background-image: url("../public/ninjaRunRight.png");
+  width: 25px;
+  height: 25px;
 }
 
 #r9c41 {

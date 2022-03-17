@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd8b7c0-b385-49e4-98f9-5c70c30d7c05" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e43fa63aecd2127be034b3fb9d4caa172275714" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Puzzle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Puzzle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dijkstra.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/getNeighborSquares.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/getNeighborSquares.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PuzzleCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PuzzleCell.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -108,7 +112,8 @@
       <workItem from="1647480646883" duration="6300000" />
       <workItem from="1647490684452" duration="3302000" />
       <workItem from="1647494011476" duration="1617000" />
-      <workItem from="1647527815356" duration="1695000" />
+      <workItem from="1647527815356" duration="2219000" />
+      <workItem from="1647550055992" duration="4248000" />
     </task>
     <servers />
   </component>
