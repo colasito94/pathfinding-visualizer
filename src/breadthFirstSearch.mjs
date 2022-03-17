@@ -1,12 +1,10 @@
-function breadthFirstSearch(x, y) {
-
+function breadthFirstSearch(board, source, destination) {
     class Node {
         constructor(value) {
             this.value = value
             this.next = null
         }
     }
-
     class Queue {
 
         constructor() {
@@ -70,29 +68,25 @@ function breadthFirstSearch(x, y) {
         }
     }
 
-    const board = Array.from(new Array(20),_=> new Array(58).fill("-"))
-    const m = board.length
-    const n = board[0].length
-
+    const [x, y] = source
+    const [dest_x, dest_y] = destination
     const visited = Array.from(new Array(20),_=> new Array(58).fill(0))
     let result = []
     let queue = new Queue()
     queue.enqueue([x, y])
+
     while (queue.size > 0) {
         let current = queue.dequeue()
         let [row, col] = current.value
-
         if (visited[row][col] === 0) {
             visited[row][col] = 1
             result.push([row, col])
         }
-
         let rowLimit = board.length-1;
         let columnLimit = board[0].length-1;
-
         for(let p = Math.max(0, row-1); p <= Math.min(row+1, rowLimit); p++) {
             for(let q = Math.max(0, col-1); q <= Math.min(col+1, columnLimit); q++) {
-                if (p === 9 && q === 41) { return result }
+                if (p === dest_x && q === dest_y) { return result }
                 if (p !== row || q !== col) {
                     if ((p !== row - 1 || q !== col - 1) && (p !== row + 1 || q !== col - 1) &&
                         (p !== row - 1 || q !== col + 1 ) && (p !== row + 1 || q !== col + 1 )) {
@@ -108,10 +102,5 @@ function breadthFirstSearch(x, y) {
     }
     return result
 }
-
-
-// 9, 16   9,41
-// breadthFirstSearch(9, 16)
-// console.log(breadthFirstSearch(9, 16))
 
 export default breadthFirstSearch;

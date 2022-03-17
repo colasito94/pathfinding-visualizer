@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd8b7c0-b385-49e4-98f9-5c70c30d7c05" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e43fa63aecd2127be034b3fb9d4caa172275714" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4db683ff575e26ae883644a0a2f570e5dc9ff483" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/5532159012fb17fa8df9f3f8131f64ce015b5d80" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/7908d87ebdda76f666e9d121d650955e7ae0b558" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa12d8a4b58e24f353f642221ec8ef117f857c14" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb23ca54cf08fbe459aba17b0f44be93b163013e" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djikstra.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Puzzle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Puzzle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PuzzleCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PuzzleCell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PuzzleRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PuzzleRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dijkstra.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/dijkstra.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getNeighborSquares.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/getNeighborSquares.mjs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +107,8 @@
       <workItem from="1647472055799" duration="399000" />
       <workItem from="1647480646883" duration="6300000" />
       <workItem from="1647490684452" duration="3302000" />
-      <workItem from="1647494011476" duration="1264000" />
+      <workItem from="1647494011476" duration="1617000" />
+      <workItem from="1647527815356" duration="1695000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,4 @@
-function dijkstra() {
+function dijkstra(board, source, destination) {
     const top = 0;
     const parent = i => ((i + 1) >>> 1) - 1;
     const left = i => (i << 1) + 1;
@@ -66,24 +66,20 @@ function dijkstra() {
         }
     }
 
-    // Initialize board
-    const board = Array.from(new Array(20),_=> new Array(58).fill("-"))
-    let source = [9, 16]
-    let destination = [9, 41]
-
     // Setup auxiliary matrices
     const m = board.length
     const n = board[0].length
     const distances = Array.from(new Array(m),_=> new Array(n).fill(Infinity))
     const parents = Array.from(new Array(m),_=> new Array(n).fill([-1,-1]))
     const [source_x, source_y] = source
+    const [dest_x, dest_y] = destination
     distances[source_x][source_y] = 0
 
     // Initialize priority queue
     const pq = new PriorityQueue();
     pq.push([0, source_x, source_y])
 
-
+    // Dijkstra
     const allNeighbors = []
     while (pq.size() > 0) {
         const [current_distance, x, y] = pq.pop()
@@ -122,11 +118,12 @@ function dijkstra() {
     }
     const minPath = []
     calculatePath(parents, destination)
-    const new_path = minPath.filter(([row, col]) =>
-        row !== 9 || col !== 16
+
+    // Remove target and source node from path
+    return minPath.filter(([row, col]) =>
+        row !== source_x || col !== source_y
     ).filter(([row, col]) =>
-        row !== 9 || col !== 41 )
-    return new_path
+        row !== dest_x || col !== dest_y )
 }
 
 export default dijkstra;

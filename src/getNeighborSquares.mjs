@@ -1,5 +1,3 @@
-import dijkstra from "./dijkstra.mjs";
-
 const getNeighborSquares = (x, y) => {
     let queue = [];
 
@@ -23,8 +21,6 @@ const getNeighborSquares = (x, y) => {
             }
         }
     }
-
-    // const new_res = queue.filter(([row, col]) => row !== 4 || col !== 2 && (row !== 4 || col !== 17))
     return queue
 
 }
