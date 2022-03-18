@@ -89,7 +89,8 @@ function breadthFirstSearch(board, source, destination) {
                 if (p === dest_x && q === dest_y) { return result }
                 if (p !== row || q !== col) {
                     if ((p !== row - 1 || q !== col - 1) && (p !== row + 1 || q !== col - 1) &&
-                        (p !== row - 1 || q !== col + 1 ) && (p !== row + 1 || q !== col + 1 )) {
+                        (p !== row - 1 || q !== col + 1 ) && (p !== row + 1 || q !== col + 1 ) &&
+                        (board[p][q] === '-')) {
                         if (visited[p][q] === 0) {
                             queue.enqueue([p, q])
                             result.push([p, q])

@@ -1,9 +1,18 @@
-function PuzzleCell( { row, col }) {
+import {useRef} from "react";
+
+function PuzzleCell( { row, col, addBomb }) {
+    const inputRef = useRef()
+    const changeSquare = () => {
+        inputRef.current.style.background = "red"
+    }
     return (
         <>
-            <div id={`r${row}c${col}`} className="cell">
+            <div ref={inputRef} id={`r${row}c${col}`} className="cell" onClick={ () => {
+                changeSquare()
+                addBomb([row, col])
+            }
+            }>
             </div>
-
         </>
     );
 }

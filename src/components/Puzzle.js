@@ -1,16 +1,21 @@
 import PuzzleRow from "./PuzzleRow";
 import breadthFirstSearch from "../breadthFirstSearch.mjs";
-import getNeighborSquares from "../getNeighborSquares.mjs";
 import dijkstra from "../dijkstra.mjs";
 import {useEffect, useState} from "react";
 
 
 function Puzzle() {
-    const grid = Array.from(new Array(20),_=> new Array(58).fill("-"))
+    const puzzle = Array.from(new Array(20),_=> new Array(58).fill("-"))
+    const [grid, setGrid] = useState(puzzle)
     const [source, setSource] = useState([9, 16])
     const [target, setTarget] = useState([9, 41])
     const [src_x, src_y] = source
     const [dest_x, dest_y] = target
+
+    const addBomb = ([row, col]) => {
+        puzzle[row][col] = '#'
+        setGrid(puzzle)
+    }
 
     const loadNinja = () => {
         const squareID = `r${src_x}c${src_y}`
@@ -25,6 +30,7 @@ function Puzzle() {
         loadNinja();
     }, [source]);
 
+
     const loadTarget = () => {
         const squareID = `r${dest_x}c${dest_y}`
         const image = document.createElement('img')
@@ -38,28 +44,20 @@ function Puzzle() {
         loadTarget();
     }, [target]);
 
- const drawPath = () => {
+    const drawPath = () => {
         const minPath = dijkstra(grid, source, target)
         for (let i = 0; i < minPath.length; i++) {
             setTimeout(() => {
                 const [row, col] = minPath[i]
                 const squareID = `r${row}c${col}`
-                document.getElementById(squareID).style.background = "darkslategray"
+                document.getElementById(squareID).style.background = "purple"
             }, 25 * i);
         }
     }
 
-    const visualizeDijkstra = (x, y) => {
-        const minPath = getNeighborSquares(x, y)
-        for (let i = 0; i < minPath.length; i++) {
-          setTimeout(() => {
-            const [row, col] = minPath[i]
-              if (row !== src_x || col !== src_y && (row !== dest_x || col !== dest_y)) {
-            const squareID = `r${row}c${col}`
-            document.getElementById(squareID).style.background = "rgb(252,255,164)"
-                  }
-          }, 10 * i);
-        }
+    const changeSquareColor = (x, y) => {
+        const squareID = `r${x}c${y}`
+        document.getElementById(squareID).style.background = "rgb(252,255,164)"
     }
 
     const changeSource = () => {
@@ -90,7 +88,7 @@ function Puzzle() {
 
             {/*<img src={"/ninjaRunRight.png"} alt={"ninjaRunRight"} width={"25px"} height={"25px"}/>*/}
 
-            {rows.map((row, index) => <PuzzleRow row={row} index={index}/>)}
+            {rows.map((row, index) => <PuzzleRow row={row} index={index} addBomb={addBomb} />)}
 
             <button
                 onClick={ () => {
@@ -99,8 +97,8 @@ function Puzzle() {
                         for (let i = 0; i < neighbors.length; i++) {
                             setTimeout(() => {
                                 const [row, col] = neighbors[i]
-                                visualizeDijkstra(row, col)
-                            }, 5 * i)
+                                changeSquareColor(row, col)
+                            }, 10 * i)
                         }
                         return "Success"
                     }
@@ -108,7 +106,7 @@ function Puzzle() {
                     const myPromise = new Promise(function(resolve, reject) {
                         resolve(visualize())
                     });
-                    myPromise.then(setTimeout((drawPath), 3500))
+                    myPromise.then(setTimeout((drawPath), 7000))
                 }}>
                 Activate Lasers
             </button>

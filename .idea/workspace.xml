@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bd8b7c0-b385-49e4-98f9-5c70c30d7c05" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e43fa63aecd2127be034b3fb9d4caa172275714" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/7030d0b2f71b999ff89a343de08c414af32fc93a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa7165aefcf8ee3d73539e99ab007daf1aa18d8d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/breadthFirstSearch.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Puzzle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Puzzle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PuzzleCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PuzzleCell.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PuzzleRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PuzzleRow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/getNeighborSquares.mjs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,25 +45,28 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.breadthFirstSearch.mjs">
+  <component name="RunManager" selected="Node.js.Puzzle.js">
+    <configuration name="PuzzleCell.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/PuzzleCell.js" working-dir="$PROJECT_DIR$/src/components">
+      <method v="2" />
+    </configuration>
     <configuration name="Puzzle.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/Puzzle.js" working-dir="$PROJECT_DIR$/src/components">
       <method v="2" />
     </configuration>
     <configuration name="breadthFirstSearch.mjs" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/breadthFirstSearch.mjs" working-dir="$PROJECT_DIR$/src">
-      <method v="2" />
-    </configuration>
-    <configuration name="dijkstra.mjs" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/dijkstra.mjs" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <configuration name="getNeighborSquares.mjs" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/getNeighborSquares.mjs" working-dir="$PROJECT_DIR$/src">
@@ -76,11 +77,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Puzzle.js" />
+        <item itemvalue="Node.js.PuzzleCell.js" />
         <item itemvalue="Node.js.breadthFirstSearch.mjs" />
         <item itemvalue="Node.js.newNeighborSquares.mjs" />
         <item itemvalue="Node.js.getNeighborSquares.mjs" />
-        <item itemvalue="Node.js.Puzzle.js" />
-        <item itemvalue="Node.js.dijkstra.mjs" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +114,9 @@
       <workItem from="1647490684452" duration="3302000" />
       <workItem from="1647494011476" duration="1617000" />
       <workItem from="1647527815356" duration="2219000" />
-      <workItem from="1647550055992" duration="4248000" />
+      <workItem from="1647550055992" duration="4410000" />
+      <workItem from="1647562195302" duration="3668000" />
+      <workItem from="1647568479385" duration="1951000" />
     </task>
     <servers />
   </component>

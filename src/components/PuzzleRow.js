@@ -1,10 +1,10 @@
 import PuzzleCell from "./PuzzleCell";
 
-function PuzzleRow ( { row } ) {
+function PuzzleRow ( { row, addBomb  } ) {
     const columns = Array.from(Array(57).keys())
     return (
         <div>
-            {columns.map((col, index) => <PuzzleCell row={row} col={col} index={index}/>)}
+            {columns.map((col, index) => <PuzzleCell row={row} col={col} index={index} addBomb={addBomb} />)}
         </div>
     );
 }
