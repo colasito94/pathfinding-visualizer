@@ -6,7 +6,7 @@ function HomePage() {
         <div>
             <h3 id="title"> Pathfinding Visualizer App</h3>
 
-            <Puzzle> </Puzzle>
+            <Puzzle id={"puzzle"}> </Puzzle>
         </div>
     );
 }
