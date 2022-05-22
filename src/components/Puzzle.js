@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 
 
 function Puzzle() {
-    const puzzle = Array.from(new Array(20),_=> new Array(58).fill("-"))
+    const puzzle = Array.from(new Array(19),_=> new Array(57).fill("-"))
     const [grid, setGrid] = useState(puzzle)
     const [source, setSource] = useState([9, 16])
     const [prevSource, setPrevSource] = useState([9, 16])
@@ -14,7 +14,6 @@ function Puzzle() {
     const [src_x, src_y] = source
     const [dest_x, dest_y] = target
     const [isChanging, setIsChanging] = useState("")
-    const [isChangingDest, setIsChangingDest] = useState(false)
 
     const addBomb = ([row, col]) => {
         grid[row][col] = '#'

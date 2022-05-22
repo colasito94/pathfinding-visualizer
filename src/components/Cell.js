@@ -5,20 +5,27 @@ function Cell({ row, col, addBomb, changeSource, isChanging, changeTarget }) {
     const changeSquare = () => {
         inputRef.current.style.background = "red"
     }
+
     return (
         <>
-            <div ref={inputRef} id={`r${row}c${col}`} className="container"
+            <div ref={inputRef} id={`r${row}c${col}`} className="container" draggable={true}
                  onClick={ () => {
-                 if (isChanging === "source") {
-                     changeSource(row, col)
+                     if (isChanging === "source") {
+                         changeSource(row, col)
+                     }
+                     else if (isChanging === "dest") {
+                         changeTarget(row, col)
+                     } else {
+                         changeSquare()
+                         addBomb([row, col])
+                        }
+                     }
                  }
-                 else if (isChanging === "dest") {
-                     changeTarget(row, col)
-                 } else {
+                 onDragOver={ () => {
                      changeSquare()
                      addBomb([row, col])
+                     }
                  }
-                 }}
             >
             </div>
         </>
