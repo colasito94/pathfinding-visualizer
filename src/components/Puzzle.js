@@ -17,8 +17,8 @@ function Puzzle() {
     const [isChangingDest, setIsChangingDest] = useState(false)
 
     const addBomb = ([row, col]) => {
-        puzzle[row][col] = '#'
-        setGrid(puzzle)
+        grid[row][col] = '#'
+        setGrid(grid)
     }
 
     const resetBoard = () => {
